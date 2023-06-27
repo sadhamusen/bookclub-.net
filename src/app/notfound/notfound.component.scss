@@ -1,0 +1,19 @@
+
+.vis{
+    display: none;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  a, u {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+  }
+  @media only screen and (max-width: 580px) {
+    .dis {
+      display: none;
+    }
+    .vis{
+        display: block;
+    }}

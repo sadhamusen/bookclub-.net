@@ -1,0 +1,215 @@
+img{
+    width: 200px;
+    margin: auto;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+a, u {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+}
+
+mat-card{
+display: grid;
+place-content: center;
+min-height: 100vh;
+}.schedule-info {
+    &.schedule-info__block {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      align-items: stretch;
+      width: 100%;
+    }
+  
+    &.schedule-info__container {
+      flex: 1;
+      margin: 5px 0 5px 0;
+      flex-flow: column nowrap;
+      width: 80%;
+      justify-content: flex-start;
+      align-items: center;
+      box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14),
+        0 3px 1px -2px rgba(156, 39, 176, 0.2),
+        0 1px 5px 0 rgba(156, 39, 176, 0.12);
+      text-transform: uppercase;
+      letter-spacing: 0;
+      outline: 0;
+      -webkit-font-smoothing: antialiased;
+      border-collapse: collapse;
+      background-color: #ebeaec;
+      font-family: 'Roboto', 'sans-serif';
+  
+    }
+  }
+  
+  
+  .card {
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: auto;
+    width: 400px;
+    font-family: Lato;
+    color: #000000;
+    border-top: 6px solid #38429F;
+    background-color: #e3e3e3;
+    font-family: 'Roboto', 'sans-serif';    
+    -webkit-box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.25);
+  }
+  
+  .card.active {
+    border-color: #0f7552;
+  }
+  
+  .card-img {
+    flex-basis: 10%;
+    width: 100%;
+    background-color: rgb(0,	120,	241);
+    background: rgba(29,29,29,1);
+    background-blend-mode: screen;
+    background-size: cover;
+    opacity: 0.6;
+    z-index: 0;
+  }
+  
+  .card-deets {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Roboto', 'sans-serif';
+    color: #000;
+  }
+  .card-info {
+    margin: 5px 20px;
+    font-family: 'Roboto', 'sans-serif';
+  }
+  .card-type {
+    flex-basis: 100%;
+    font-family: 'Roboto', 'sans-serif';
+  }
+  .card-date {
+    float: right;
+    text-align: center;
+    background-color: #e85319;
+    padding-top: 0 !important;
+    font-family: 'Roboto', 'sans-serif';
+  }
+  .card-title {
+    flex-basis: 36%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Roboto', 'sans-serif';
+  }
+  .card-author {
+    flex-basis: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: 'Roboto', 'sans-serif';
+  }
+  .card-time{
+    flex-basis: 40%;
+    display: inline-block;
+    text-align: right;
+    font-family: 'Roboto', 'sans-serif';
+  }
+  
+  .card-description {
+    clear: both;
+    padding-top: 20px;
+    font-family: 'Roboto', 'sans-serif';
+    margin: 0 20px 20px 20px;
+    font-size: 0.9em;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+  }
+  .card-data {
+    width: 100%;
+    font-family: 'Roboto', 'sans-serif';
+    margin-bottom: 20px;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: row;
+    div {
+      padding: 5px;
+      font-family: 'Roboto', 'sans-serif';
+      margin-bottom: 20px;
+      float: left;
+      width: 33.333339%;
+      border-right: 1px solid rgba(0,0,25,0.35);
+      text-align: center;
+      h6 { opacity:0.35 }
+      p { letter-spacing: 0.02em; }
+    }
+    div:nth-child(3) {
+        border-right: none;
+      }  
+  }
+  .card-btn {
+    position:relative;
+    font-family: 'Roboto', 'sans-serif';
+    display: block;
+    overflow:hidden;
+    border: 1px solid rgba(255,255,255,0.15);
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color .3s ease-in-out;
+    p {
+      font-family: 'Roboto', 'sans-serif';
+      margin-top: 14px;
+      text-transform: uppercase;
+      font-weight: 200;
+      letter-spacing: 0.2em;
+    }
+    status-gray {
+    background-color: #c0bdbd;
+    color: #2b2727;
+  }
+  
+  status-light-blue {
+    background-color: #87a2c7;
+    color: #2b2727;
+  }
+  
+  status-blue {
+    background-color: #3865a3;
+    color: #ffffff;
+  }
+  
+  status-yellow {
+    background-color: #ffcc00;
+    color: #2b2727;
+    letter-spacing: 0.05em;
+  }
+  &.status-green {
+    background-color: #31f03a;
+    color: #000000;
+    letter-spacing: 0.05em;
+  }
+  }  
+  status-display {
+    display: inline-block;
+    text-align: center;
+  }
+  .vis{
+    display:none ;
+  }
+  @media only screen and (max-width: 580px) {
+    .dis {
+      display: none;
+    }
+    .vis{
+        display: block;
+    }    
+  }

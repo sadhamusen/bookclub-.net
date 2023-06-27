@@ -1,0 +1,45 @@
+<mat-toolbar>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu_book</mat-icon>
+  </button>
+  <span>Book Club</span>
+  <span class="example-spacer"></span>
+  <a routerLink="" class="dis"><span>Home</span></a>
+  <a routerLink="" class="vis"
+    ><mat-icon
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="home"
+    ></mat-icon></a
+></mat-toolbar>
+<div class="schedule-item__container">
+  <div class="card">
+    <div class="card-img"></div>
+    <div class="card-deets">
+      <img [src]="book.image" />
+      <div class="card-info card-type"></div>
+      <div class="card-info card-author">
+        <p>
+          <strong>{{ book.title | titlecase }}</strong>
+        </p>
+      </div>
+      <div class="card-info card-title">
+        <p>{{ book.author }}</p>
+      </div>
+      <div class="card-info card-time">
+        <p>{{ book.PublicationDate | date }}</p>
+      </div>
+    </div>
+    <p class="card-info card-description">
+      {{ book.des }}
+    </p>
+    <div style="text-align: center"></div>
+    <div class="card-btn status-green">
+      <p>{{ book.category }}</p>
+    </div>
+  </div>
+</div>

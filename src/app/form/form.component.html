@@ -1,0 +1,105 @@
+<mat-toolbar>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu_book</mat-icon>
+  </button>
+  <span>Book Club</span>
+  <span class="example-spacer"></span>
+  <a routerLink="" class="dis"><span>Home</span></a>
+  <a routerLink="" class="vis"
+    ><mat-icon
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="home"
+    ></mat-icon></a
+></mat-toolbar>
+<form class="example-form" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="example-full-width">
+    <mat-label>Title</mat-label>
+    <input type="text" matInput placeholder="Title" formControlName="title" />
+    <mat-error *ngIf="title?.hasError('required')">
+      Title is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Image</mat-label>
+    <input type="text" matInput placeholder="image" formControlName="image" />
+    <mat-error *ngIf="image?.hasError('required')">
+      image is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="image?.hasError('pattern')">
+      image is <strong>not a valid url</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Author</mat-label>
+    <input type="text" matInput placeholder="Author" formControlName="author" />
+    <mat-error *ngIf="author?.hasError('required')">
+      Author is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Category</mat-label>
+    <input
+      type="text"
+      matInput
+      placeholder="Category"
+      formControlName="category"
+    />
+    <mat-error *ngIf="category?.hasError('required')">
+      Category is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>rating</mat-label>
+    <input
+      type="number"
+      matInput
+      placeholder="Rating"
+      formControlName="rating"
+    />
+    <mat-error *ngIf="rating?.hasError('required')">
+      rating is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Publication Date</mat-label>
+    <input
+      type="date"
+      matInput
+      placeholder="Category"
+      formControlName="PublicationDate"
+    />
+    <mat-error *ngIf="PublicationDate?.hasError('required')">
+      Publication Date is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>status</mat-label>
+    <mat-select formControlName="status">
+      <mat-option *ngFor="let country of countriesList" [value]="country">{{
+        country
+      }}</mat-option>
+    </mat-select>
+    <mat-error *ngIf="status?.hasError('required')">
+      status is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <!-- <mat-form-field appearance="fill">
+    <mat-label>Favourite</mat-label>
+    <mat-select formControlName="fav">
+      <mat-option *ngFor="let country of Favourite" [value]="country">{{
+        country
+      }}</mat-option>
+    </mat-select>
+    <mat-error *ngIf="fav?.hasError('required')">
+      favourite is <strong>required</strong>
+    </mat-error>
+  </mat-form-field> -->
+  <button mat-button color="primary" [disabled]="!bookForm.valid">
+    submit
+  </button>
+</form>

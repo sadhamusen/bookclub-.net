@@ -1,0 +1,43 @@
+.book{
+    width: 250px;
+    height: auto;
+    display: flex;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+img{
+    border-radius: 10px;
+    object-fit: cover;
+}
+.title{
+    font-size: 13px;
+    text-align: center;
+}
+.images{
+    height: 378px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.author{
+    font-size: 12px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.des{
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: justify;
+}
+.button{
+    width: 83%;
+    margin: 0 auto;
+}
+ngb-rating{
+    color: #FFC107;
+    font-size: 20px;
+
+}
+.rating{
+    width: 50%;
+    margin: auto;
+}

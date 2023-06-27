@@ -1,0 +1,60 @@
+<div class="book">
+  <div>
+    <div class="images">
+      <img [src]="book1.image" style="height: auto; width: 250px" />
+    </div>
+    <div class="rating">
+      <ngb-rating
+        [max]="5"
+        [rate]="book1.rating"
+        [readonly]="true"
+      ></ngb-rating>
+    </div>
+    <div class="title">
+      <p>{{ book1.title | titlecase }}</p>
+    </div>
+    <div class="author">
+      <p>{{ book1.author }}</p>
+    </div>
+    <p class="des">
+      Status:<b>{{ book1.status }}</b>
+    </p>
+    <p class="des">
+      {{ book1.des | slice : 0 : 200 }}
+      <span *ngIf="!showMore">...</span>
+      <a
+        href="bookdetails/{{ book1.id }}"
+        (click)="details(book1.id)"
+        *ngIf="!showMore"
+        (click)="showMore = true"
+        >[Show More]</a
+      >
+    </p>
+    <div class="button">
+      <button
+        (click)="edit(book1.id)"
+        mat-icon-button
+        color="basic"
+        aria-label="Edit is used edit content of the book"
+      >
+        <mat-icon matTooltip="edit">edit</mat-icon>
+      </button>
+      <button
+        (click)="delfav1(book1.id)"
+        mat-icon-button
+        color="warn"
+        aria-label="delete is used delete content of the book"
+      >
+        <mat-icon matTooltip="delete">delete</mat-icon>
+      </button>
+      <button
+        (click)="details(book1.id)"
+        mat-icon-button
+        color="primary"
+        aria-label="info is used to show the description"
+      >
+        <mat-icon matTooltip="info">info</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

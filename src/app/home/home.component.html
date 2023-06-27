@@ -1,0 +1,71 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+</head>
+<mat-toolbar>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu_book</mat-icon>
+  </button>
+  <span>Book Club</span>
+  <span class="example-spacer"></span>
+  <!-- <mat-form-field appearance="fill" class="dis">
+    <mat-label>Search Book</mat-label>
+    <input
+      type="text"
+      (keyup)="filter($event)"
+      matInput
+      placeholder="Type something.."
+    />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field> -->
+  <a routerLink="" class="dis"><span>Home</span></a>
+  <a routerLink="form" class="dis"><span>Add Book</span></a>
+  <a routerLink="favourite" class="dis"><span>Favorite</span></a>
+  <a routerLink="" class="vis"
+    ><mat-icon
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="home"
+    ></mat-icon
+  ></a>
+  <a routerLink="favourite" class="vis"
+    ><mat-icon
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="favorite"
+    ></mat-icon
+  ></a>
+  <a routerLink="form" class="vis"
+    ><mat-icon
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="library_add"
+    ></mat-icon
+  ></a>
+</mat-toolbar>
+<div class="vis1">
+  <div class="search-box">
+    <input
+      class="search-input"
+      (keyup)="filter($event)"
+      type="text"
+      placeholder="Search Book.."
+    />
+    <button class="search-btn"><i class="fa fa-search"></i></button>
+  </div>
+</div>
+<div class="movie-list-container">
+  <app-bookcard
+    *ngFor="let m of bookes$ | async"
+    [book]="m"
+    (delete)="deleteMovie($event)"
+  ></app-bookcard>
+  <p *ngIf="bookes.length === 0">No bookes were Found</p>
+  <!-- <app-forms-example (add)="addMovie($event)"></app-forms-example> -->
+</div>

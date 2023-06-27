@@ -1,0 +1,27 @@
+.example-form{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(239,252,255,1) 0%, rgba(0,212,255,1) 100%);
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  a, u {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+  }
+  .vis{
+    display: none;
+  }
+
+  @media only screen and (max-width: 580px) {
+    .dis {
+      display: none;
+    }
+    .vis{
+        display: block;
+    }}
